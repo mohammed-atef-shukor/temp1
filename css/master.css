@@ -1,0 +1,305 @@
+:root{
+    --main-color:#0099d4d1;
+    --main-transition:.7s ease-in-out ;
+}
+html {
+    scroll-behavior: smooth;
+}
+  
+.sidbar{
+    width:120px;
+    height: 100vh;
+    position: fixed;
+    left: 0px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    top: 0px;
+}
+.mead-sid{
+    position: absolute;
+    left:0px;
+    top: 50%;
+    border-color: transparent transparent transparent var(--main-color);
+    border-width: 60px;
+    border-style: solid;
+    padding:0px;
+    height: 0px;
+    transition: var(--main-transition);
+    -webkit-transition: var(--main-transition);
+    -moz-transition: var(--main-transition);
+    -ms-transition: var(--main-transition);
+    -o-transition: var(--main-transition);
+    display: none;
+} 
+
+ 
+ 
+.sidbar .img-sid img{
+    width: 100%;
+    height: 100%;
+}
+.sidbar .img-sid{
+    height:calc((100%  )/5);
+    width: 100%;
+    position: relative;
+}
+.sidbar .cont-sid{
+    width: 100%;
+    height: 100%;
+}
+
+.sidbar .img-sid::after{
+    content: "";
+    position: absolute;
+    width: calc(100% - 4px);
+    height: calc(100% - 2px);
+    background-color: transparent;
+    border: 2px solid  var(--main-color);
+    border-bottom-color: white;
+    left: 0px;
+}
+.sidbar> ul {
+    background-color:var(--main-color);
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.sidbar> ul li{
+    width:120px;
+    height:calc((100%  )/5);
+    margin-bottom: 0px;
+    position: relative;
+}
+
+.sidbar> ul li::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.sidbar> ul li:hover::after{
+    z-index: -2;
+}
+.sidbar> ul li:hover a {
+    color: white;
+}
+.sidbar> ul> li> a{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,50%);
+    -webkit-transform: translate(-50%,50%);
+    -moz-transform: translate(-50%,50%);
+    -ms-transform: translate(-50%,50%);
+    -o-transform: translate(-50%,50%);
+    text-decoration: none;
+    color: #000;
+}
+.sidbar> ul> li> a> i{
+    width: 100%;
+    position: relative;
+    left: 10px;
+    top: 20px;
+    font-size: 25px;
+}
+ 
+.sidbar> ul> li> a> span{
+    width: 100%;
+    position: relative;
+    left: -2px;
+    top: 48px;
+}
+.contaner-intro{
+    width: calc(100% - 120px);
+    position: relative ;
+    left: 120px;
+    top: -22px;
+    height:   calc(100vh + 22px)   ;
+}
+ 
+.contaner-intro .home .img-home{
+    width: 100%;
+    height: 100%;
+}
+.contaner-intro .home p {
+    position: absolute;
+    margin-bottom: 300px;
+    color: white;
+    top:25%;
+    right: 170px;
+    text-align: center;
+    font-size:20px;
+    font-family: "Sofia", sans-serif;
+    text-shadow: 3px 3px 3px #ababab;
+}
+.contaner-intro .home h1{
+    color: white;
+    position: absolute;
+    top:10%;
+    right: 121px;
+    height: auto;
+    font-family: "Sofia", sans-serif;
+    text-shadow: 3px 3px 3px #ababab;
+ 
+}
+.contaner-about{
+    width: calc(100% - 140px);
+    position: relative ;
+    left: 130px;
+    top: -22px;
+    height:   calc(100vh + 22px)   ;
+}
+.contaner-about .txt h2,.contaner-about .txt h3{
+    color: white;
+    background-color: var(--main-color);
+    text-align: center;
+}
+.contaner-about .txt p{
+    background-color:rgba(35, 130, 135, 0.6);
+    padding: 10px;
+    color: white;
+}
+.contaner-about .about .skill-ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    width: 90%;
+    margin-left: 5%;
+}
+.contaner-about .about .skill-ul li{
+    margin-bottom: 40px;
+    position: relative;
+    
+}
+.contaner-about .about .skill-ul li::after{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(32, 30, 27, 0.518);
+}
+.contaner-about .about .skill-ul li:first-child::before{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 70%;
+    height: 100%;
+    background-color:var(--main-color);
+    z-index: 20;
+}
+.contaner-about .about .skill-ul li:nth-child(2)::before{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 90%;
+    height: 100%;
+    background-color:var(--main-color);
+    z-index: 20;
+}
+.contaner-about .about .skill-ul li:last-child::before{
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 0px;
+    width: 40%;
+    height: 100%;
+    background-color:var(--main-color);
+    z-index: 20;
+}
+.price h3{
+    background-color:var(--main-color) ;
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+}
+.price .inf-price ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    text-align: center;
+    
+}
+.price .inf-price{
+    display: grid;
+    grid-template-columns: repeat(2,48%);
+    justify-content: space-evenly;
+     
+}
+.price .inf-price ul li{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    background-color: var(--main-color);
+    color: white;
+    border-bottom: 1px solid white;
+    position: relative;
+}
+.price .inf-price ul li:first-child{
+    background-color: rgba(32, 30, 27, 0.518);
+    height: 50px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.price .inf-price ul li:nth-child(6) {
+    display: grid;
+}
+.price .inf-price ul li:not(:nth-child(1))::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(0, 0, 0, 0.1);
+    z-index:-2;
+}
+
+.price .inf-price ul li:hover::before{
+    z-index: 10;
+}
+
+.price .inf-price ul li:nth-child(7) button {
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    border: 1px solid white;
+    color: white;
+    background-color: var(--main-color);
+    cursor: cell;
+}
+.price .inf-price ul li:nth-child(7)  {
+    cursor: cell;
+    height: 45px;
+}
+@media(max-width:900px){
+    .price .inf-price {
+        grid-template-columns: repeat(1,98%);
+    }
+    .price .inf-price ul {
+        margin-bottom: 20px;
+
+    }
+    /* .contaner-about {
+        width: 100%;
+        margin-top: 0px;
+    }
+    .contaner-intro {
+        width: 100%;
+        margin-top: 0px;
+    } */
+
+
+}
