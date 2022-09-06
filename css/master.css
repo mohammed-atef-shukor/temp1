@@ -469,4 +469,15 @@ html {
   .contaner-contact >div .social div a i{
     font-size: 20px;
    }
+   @media(max-width:900px){
+    .contaner-contact >div .social p {
+            left: 2px;
+            font-size: 15px;
+    }
+    .contaner-contact >div .social div {
+        position: absolute;
+        right: 13px;
+        top: 8px;
+    }
+   }
 
